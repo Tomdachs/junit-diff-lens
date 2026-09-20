@@ -1,0 +1,5 @@
+/* System fonts only: no external requests, even on the first visit. */
+html {
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}

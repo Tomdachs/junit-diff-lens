@@ -1,0 +1,21 @@
+name: Bug report
+description: Report incorrect comparison or browser behavior
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser, OS, and app version
+    validations:
+      required: true
+  - type: textarea
+    id: fixture
+    attributes:
+      label: Minimal synthetic XML and steps
+      description: Remove all secrets, private paths, and personal data. Do not attach real private CI reports.
+      render: xml

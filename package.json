@@ -1,0 +1,36 @@
+{
+  "name": "junit-diff-lens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Compare two JUnit XML reports privately in your browser.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "prettier --check . && npm test && npm run build && npm run test:e2e",
+    "format": "prettier --write .",
+    "postbuild": "node scripts/write-notices.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "jsdom": "30.1.0",
+    "prettier": "3.9.8",
+    "typescript": "7.0.2",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  }
+}
